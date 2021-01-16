@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10FEEBE3-6DDE-4457-A2D1-5FE6F30FF823}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>binek</RootNamespace>
+    <AssemblyName>binek</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ComponentCarBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCarBox.Designer.cs">
+      <DependentUpon>ComponentCarBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelperDB.cs" />
+    <Compile Include="PageAddCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageAddCar.Designer.cs">
+      <DependentUpon>PageAddCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageAddCustomer.Designer.cs">
+      <DependentUpon>PageAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageAddReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageAddReservation.Designer.cs">
+      <DependentUpon>PageAddReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageCars.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageCars.Designer.cs">
+      <DependentUpon>PageCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageCustomers.Designer.cs">
+      <DependentUpon>PageCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageHome.Designer.cs">
+      <DependentUpon>PageHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageReservations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PageReservations.Designer.cs">
+      <DependentUpon>PageReservations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLogin.Designer.cs">
+      <DependentUpon>ViewLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMain.Designer.cs">
+      <DependentUpon>ViewMain.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ComponentCarBox.resx">
+      <DependentUpon>ComponentCarBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageAddCar.resx">
+      <DependentUpon>PageAddCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageAddCustomer.resx">
+      <DependentUpon>PageAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageAddReservation.resx">
+      <DependentUpon>PageAddReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageCars.resx">
+      <DependentUpon>PageCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageCustomers.resx">
+      <DependentUpon>PageCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageHome.resx">
+      <DependentUpon>PageHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PageReservations.resx">
+      <DependentUpon>PageReservations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ViewLogin.resx">
+      <DependentUpon>ViewLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMain.resx">
+      <DependentUpon>ViewMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMain.tr-TR.resx">
+      <DependentUpon>ViewMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54c0f620a8a0ae78e91626c6b9e36fa6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\967f08d24af11b020931ebe21885f05d.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mini-cooper-cabrio-2d-weiss-offen-2018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gas-station.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sport-car.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
